@@ -1,0 +1,408 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:700);
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Dosis;
+}
+
+body {
+    background-color: rgb(71, 71, 71);
+    color: whitesmoke;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+}
+
+
+.title {
+    width: 500px;
+    padding: 20px;
+    padding-bottom: 10px;
+    outline-style: dotted;
+    outline-color: #adadad;
+    border-radius: 30px;
+    box-shadow: 0 0 15px 10px inset rgba(114, 114, 114, 0.39);
+    transition: all 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+
+.title:hover {
+    box-shadow: 0 0 15px 10px inset rgba(114, 114, 114, 0.781);
+    transition: all 0.5s;
+    outline-color: #ffffff;
+}
+
+.title-small {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    position: absolute;
+    top: 2px;
+    right: 125px;
+}
+
+.the {
+    font-size: 16px;
+    color: #DC3535;
+}
+
+.password {
+    font-size: 30px;
+    color: #f5aeae;
+}
+
+.generator {
+    font-size: 50px;
+    font-family: 'Righteous', cursive;
+}
+
+
+/* MAIN */
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.main-description {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+    margin-right: 20px;
+    border-right: 4px dotted #adadad;
+}
+
+.main-selectors {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+    gap: 10px;
+}
+
+.selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.selector-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.reveal {
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.5s;
+}
+
+.reveal-password {
+    width: max-content;
+    min-width: 300px;
+    height: 45px;
+    background-color: rgba(196, 196, 196, 0.904);
+    outline-style: dotted;
+    outline-color: #adadad;
+    border-radius: 30px;
+    box-shadow: 0 0 15px 10px inset rgba(219, 219, 219, 0.39);
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    line-height: 45px;
+    transition: all 0.5s;
+
+}
+
+.reveal-button {
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: all 0.5s;
+}
+
+.reveal-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.shown {
+    display: flex;
+    transition: all 0.5s;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5px;
+}
+
+
+/* INPUT CHECKBOXES */
+
+.switch {
+    --circle-dim: 1.4em;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f5aeae;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider-card {
+    position: absolute;
+    content: "";
+    height: var(--circle-dim);
+    width: var(--circle-dim);
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    transition: .4s;
+    pointer-events: none;
+  }
+  
+  .slider-card-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    border-radius: 50%;
+    transition: .4s transform;
+  }
+  
+  .slider-card-front {
+    background-color: #DC3535;
+  }
+  
+  .slider-card-back {
+    background-color: #379237;
+    transform: rotateY(180deg);
+  }
+  
+  input:checked ~ .slider-card .slider-card-back {
+    transform: rotateY(0);
+  }
+  
+  input:checked ~ .slider-card .slider-card-front {
+    transform: rotateY(-180deg);
+  }
+  
+  input:checked ~ .slider-card {
+    transform: translateX(1.5em);
+  }
+  
+  input:checked ~ .slider {
+    background-color: #9ed99c;
+  }
+
+
+  /* INPUT RANGE CUSTOM CSS */
+
+.value {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: -.07em;
+  text-shadow: rgb(54, 54, 54) 2px 2px 2px;
+  margin-top: -40px;
+  margin-bottom: 30px;
+}
+
+input[type="range"] {
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+  margin-top: 50px
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #e74c3c;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 2px solid #e74c3c;
+}
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.2);
+}
+
+
+/* BUTTONS */
+
+button {
+    background: #333333;
+    padding: 10px 2rem;
+    outline: 2.5px solid #919191;
+    outline-offset: 3px;
+    border: 0;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+    border-radius: 100rem;
+    transition: 0.4s;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-self: center;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    outline-offset: 4.5px;
+    background: #e74c3c;
+    transform: scale(1.1);
+    outline: 2.5px solid #e74c3c;
+  }
+
+
+
+
+  /* MEDIA QUERIES */
+
+  
+@media (max-width: 600px) {
+
+    footer {
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .title {
+        width: 95%;
+        border-radius: 0;
+        border-right: none;
+        border-left: none;
+    }
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-description {
+        text-align: center;
+        align-items: center;
+        margin-right: 0;
+        border-right: none;
+    }
+
+    .main-selectors {
+        border: 2px solid rgb(117, 117, 117);
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    .reveal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .reveal-password {
+        width: 80%;
+        min-width: 300px;
+        transition: all 0.5s;
+    }
+
+    main {
+        padding-top: 10px;
+    }
+  }

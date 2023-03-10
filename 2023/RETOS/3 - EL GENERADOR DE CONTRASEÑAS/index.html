@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/password.png" type="image/x-icon">
+    <title>Password Generator</title>
+</head>
+<body>
+    <header>
+        <div class="title" onclick="window.location.reload()">
+            <div class="title-small">
+                <h3 class="the">the</h3>
+                <h2 class="password">password</h2>
+            </div>
+            <h3 class="generator">GENERATOR</h3>
+        </div>
+        
+    </header>
+    <main>
+        <div class="main-container">
+            <section class="main-description">
+                <p>Are you looking for an easy password generator?</p>
+                <p>Just mark the checkboxes and press GENERATE</p>
+                <p>¡¡¡ As easy as it seems !!!</p>
+
+                <button type="button" onclick="passGenerator()">GENERATE</button>
+            </section>
+            <section class="main-selectors">
+                <form>
+                    <div class="selector-slider">
+                        <label for="chars">How many characters do you want ?
+                            <input name="chars" step="1" id="chars" type="range" min="4" max="40"><div class="value" id="length"></div>
+                        </label>
+                    </div>
+                    
+                    <div class="selector"> LowerCase Letters ?
+                        <label class="switch">
+                            <input type="checkbox" id="lower">
+                            <div class="slider"></div>
+                            <div class="slider-card">
+                                <div class="slider-card-face slider-card-front"></div>
+                                <div class="slider-card-face slider-card-back"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="selector"> UpperCase Letters ?
+                        <label class="switch">
+                            <input type="checkbox" id="upper">
+                            <div class="slider"></div>
+                            <div class="slider-card">
+                                <div class="slider-card-face slider-card-front"></div>
+                                <div class="slider-card-face slider-card-back"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="selector"> Numbers ?
+                        <label class="switch">
+                            <input type="checkbox" id="numbers">
+                            <div class="slider"></div>
+                            <div class="slider-card">
+                                <div class="slider-card-face slider-card-front"></div>
+                                <div class="slider-card-face slider-card-back"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="selector"> Symbols ?
+                        <label class="switch">
+                            <input type="checkbox" id="symbols">
+                            <div class="slider"></div>
+                            <div class="slider-card">
+                                <div class="slider-card-face slider-card-front"></div>
+                                <div class="slider-card-face slider-card-back"></div>
+                            </div>
+                        </label>
+                    </div>
+                    
+                </form>
+            </section>
+        </div>
+        <section class="reveal">
+            <h2 id="password" class="reveal-password"></h2>
+            <button type="button" onclick="clypboardCopy()" class="reveal-button"><img class="reveal-icon" src="./assets/clypboard.png" alt="clypboard"></button>
+        </section>
+    </main>
+    <footer>
+        <p>Design by Oriol Molins in JavaScript + HTML5 + CSS</p>
+    </footer>
+</body>
+</html>
